@@ -46,7 +46,7 @@ type GoogleSheetsConfig struct {
 
 type Config struct {
 	HTTPServer      HTTPServerConfig `yaml:"http_server"`
-	Database        DatabaseConfig   `yaml:"database"`
+	Database        DatabaseConfig   `yaml:"databases"`
 	GracefulTimeout time.Duration    `yaml:"graceful_timeout"`
 	Bot             BotConfig        `yaml:"bot"`
 }

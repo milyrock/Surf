@@ -16,10 +16,13 @@ databases:
     max_idle_conns: 2
     conn_max_idle_time: 0s
 
+graceful_timeout: 20s
+
+bot:
+  token: ${TOKEN} 
+
 google_sheets:
   credentials_file: "./config/dev/google-sheets-service-account-key.json" # TODO: change this later 
   spreadsheet_id: ${GOOGLE_SPREADSHEET_ID}
   sheet_name: "Main"
 
-bot:
-  token: ${TOKEN}
