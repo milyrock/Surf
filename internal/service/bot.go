@@ -4,6 +4,10 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
+// const (
+// 	addItemCommand = "add"
+// )
+
 type BotConfig struct {
 	Bot        *tgbotapi.BotAPI
 	RecordRepo RecordRepository
