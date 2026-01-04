@@ -1,5 +1,7 @@
 package models
 
+import "time"
+
 type RecordCategory string
 
 const (
@@ -10,9 +12,10 @@ const (
 )
 
 type Record struct {
-	ID       int `db:"id"`
-	Name     string
-	Product  string
-	Category RecordCategory
-	Amount   int
+	ID        int            `db:"id"`
+	Name      string         `db:"name"`
+	Product   string         `db:"product"`
+	Category  RecordCategory `db:"category"`
+	Amount    int            `db:"amount"`
+	CreatedAt time.Time      `db:"created_at"`
 }

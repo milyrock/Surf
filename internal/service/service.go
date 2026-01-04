@@ -1,12 +1,18 @@
 package service
 
 import (
+	"time"
+
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/milyrock/Surf/internal/models"
 )
 
 type RecordRepository interface {
 	Create(rec *models.Record) error
+	GetAll() ([]*models.Record, error)
+	GetByUserID(username string) ([]*models.Record, error)
+	GetByDate(date time.Time) ([]*models.Record, error)
+	GetByUserIDAndDate(username string, date time.Time) ([]*models.Record, error)
 }
 
 type Service struct {
